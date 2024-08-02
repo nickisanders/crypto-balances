@@ -1,0 +1,2 @@
+Ethereum,https://mainnet.infura.io/v3/,ETH
+Polygon,https://polygon-mainnet.infura.io/v3/,MATIC
