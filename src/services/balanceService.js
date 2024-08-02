@@ -1,7 +1,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const {Web3} = require('web3');
+const { Web3 } = require('web3');
 const { getBalance } = require('../utils/rpcClient');
 const config = require('../config');
 
@@ -17,10 +17,10 @@ const ERC20_ABI = [
 ];
 
 const readBlockchainInfo = () => {
-  const filePath = path.resolve(__dirname, '../../blockchains.txt');
-  const fileContent = fs.readFileSync(filePath, 'utf-8').trim();
-  return fileContent.split('\n').map(line => {
-    const [name, rpcUrlBase, nativeAsset, tokenAddress, tokenSymbol] = line.split(',');
+  const filePath = path.resolve(__dirname, '../../blockchains.json');
+  const fileContent = fs.readFileSync(filePath, 'utf-8');
+  return JSON.parse(fileContent).map(blockchain => {
+    const { name, rpcUrlBase, nativeAsset, tokenAddress, tokenSymbol } = blockchain;
     const rpcUrl = `${rpcUrlBase}${config.infuraProjectId}`;
     return { name, rpcUrl, nativeAsset, tokenAddress, tokenSymbol };
   });

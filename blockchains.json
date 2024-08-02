@@ -1,0 +1,17 @@
+[
+    {
+      "name": "Ethereum",
+      "rpcUrlBase": "https://mainnet.infura.io/v3/",
+      "nativeAsset": "ETH",
+      "tokenAddress": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+      "tokenSymbol": "DAI"
+    },
+    {
+      "name": "Polygon",
+      "rpcUrlBase": "https://polygon-mainnet.infura.io/v3/",
+      "nativeAsset": "MATIC",
+      "tokenAddress": "0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619",
+      "tokenSymbol": "WETH"
+    }
+  ]
+  
